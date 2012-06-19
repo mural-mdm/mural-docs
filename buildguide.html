@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Sun GlassFish Enterprise Server - Features and Resources</TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice 9  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Charles Ye">
+	<META NAME="CHANGED" CONTENT="20111220;19070000">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<META NAME="CHANGEDBY" CONTENT="Charles Ye">
+	<META NAME="CHANGEDBY" CONTENT="Charles Ye">
+	<STYLE TYPE="text/css">
+	<!--
+		TD P { color: #000000; font-family: "geneva", "helvetica", "arial", "lucida sans", sans-serif; font-size: 10pt }
+		H1 { color: #000000; font-family: "geneva", "helvetica", "arial", "lucida sans", sans-serif; font-size: 18pt }
+		P { color: #000000; font-family: "geneva", "helvetica", "arial", "lucida sans", sans-serif; font-size: 10pt }
+		H2 { color: #000000; font-family: "geneva", "helvetica", "arial", "lucida sans", sans-serif; font-size: 14pt }
+		P.feature { margin-left: 0.3in; font-family: "geneva", "helvetica", "arial", "lucida sans", sans-serif; font-size: 10pt }
+		A:link { color: #3e6b8a; font-family: "geneva", "helvetica", "arial", "lucida sans", sans-serif; font-size: 10pt; text-decoration: none }
+		A:visited { color: #3e6b8a }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#3e6b8a" VLINK="#3e6b8a" BGCOLOR="#ffffff" DIR="LTR">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=4 STYLE="page-break-before: always">
+	<TR>
+		<TD VALIGN=TOP>
+			<P ALIGN=RIGHT><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=TOP BGCOLOR="#587993">
+			<P ALIGN=LEFT><FONT COLOR="#ffffff"><B>Mural Master Data
+			Management 2.0 </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<H1 STYLE="margin-top: 0.17in; margin-bottom: 0.16in; line-height: 150%">
+<FONT SIZE=5 STYLE="font-size: 20pt">Mural 2.0 Build Quick Start</FONT></H1>
+<H1 STYLE="margin-top: 0.17in; margin-bottom: 0in; line-height: 150%">
+Prerequisite to Building Mural 2.0</H1>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">The
+users must have the follow software installed. You can build Mural
+2.0 on windows and Linux and Unix. This guide assumes that you do on
+the windows. 
+</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Subversion client 1.7.2</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Apache Maven 2.0.9</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Apache Ant 1.8.0</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Oracle JDK 6.0</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">The
+users must have the follow software installed to test the build.</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Oracle NetBeans 7.0.1</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Oracle GlassFish 3.1.1</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">The
+users must have one of the supported databases installed.</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 150%">&#9679;
+Databases support MySQL 5.1, Oracle 9i/10g/11g, Microsoft SQL Server
+2005/2008.</P>
+<H2 STYLE="margin-top: 0.17in; margin-bottom: 0.16in"><A NAME="keyfeatures"></A>
+Build Instructions</H2>
+<P CLASS="feature" STYLE="margin-left: 0in; margin-bottom: 0in; line-height: 100%">
+&#9679; <SPAN STYLE="font-weight: normal">Check out the mural 2.0
+sources.</SPAN></P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+create the working folder C:\mural</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+svn checkout &lt;URL&gt;</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<SPAN STYLE="font-weight: normal">Edit environment variables </SPAN>
+</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+open and edit C:\mural\open-dm-mi\env.bat</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<FONT FACE="geneva, helvetica, arial, lucida sans, sans-serif"><SPAN STYLE="font-weight: normal">Setup</SPAN></FONT>
+<SPAN STYLE="font-weight: normal">environment variables </SPAN>
+</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+run C:\mural\open-dm-mi\env.bat</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<FONT FACE="geneva, helvetica, arial, lucida sans, sans-serif"><SPAN STYLE="font-weight: normal">Build
+the master index common jars by skipping the JUnit testing.</SPAN></FONT></P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+C:\mural\open-dm-mi\mvn clean install -Dmaven.test.skip=true</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<FONT FACE="geneva, helvetica, arial, lucida sans, sans-serif"><SPAN STYLE="font-weight: normal">Build
+the data integration common jars by skipping the JUnit testing.</SPAN></FONT></P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+C:\mural\open-dm-di\mvn clean install -Dmaven.test.skip=true</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<FONT FACE="geneva, helvetica, arial, lucida sans, sans-serif"><SPAN STYLE="font-weight: normal">Build
+the data quality common jars by skipping the JUnit testing.</SPAN></FONT></P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+C:\mural\open-dm-dq\mvn clean install -Dmaven.test.skip=true</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<FONT FACE="geneva, helvetica, arial, lucida sans, sans-serif"><SPAN STYLE="font-weight: normal">Build
+the master index netbeans modules jars by skipping the JUnit testing.</SPAN></FONT></P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+C:\mural\open-dm-mi\mvn clean install -Dmaven.test.skip=true</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%">&#9679;
+<FONT FACE="geneva, helvetica, arial, lucida sans, sans-serif"><SPAN STYLE="font-weight: normal">Build
+the NetBeans plugin modules.</SPAN></FONT></P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+C:\mural\open-dm-di\ant -f build-mosaic make-mosaic</P>
+<P CLASS="feature" STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+</P>
+<H2><A NAME="resources"></A>Build Deliverables 
+</H2>
+<P STYLE="margin-bottom: 0in; font-weight: normal">The Mural 2.0
+Master Data Management NetBeans module is located under</P>
+<P STYLE="margin-bottom: 0in">&#9679;
+<SPAN STYLE="font-weight: normal">C:\mural\mosaic-dist\netgen-mosaic-2.0.nbm</SPAN></P>
+<P STYLE="margin-bottom: 0in; font-weight: normal">The Mural 2.0
+MultiDomain Relationship Management NetBeans module is located under</P>
+<P STYLE="margin-bottom: 0in">&#9679;
+<SPAN STYLE="font-weight: normal">C:\mural\mosaic-dist\netgen-mosaic-multidomain-2.0.nbm</SPAN></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<H2><B>Test Build </B>
+</H2>
+<P><SPAN STYLE="font-weight: normal">Refer to Quick Start Guide.</SPAN>
+</P>
+<H2><B>Resources</B></H2>
+<P><SPAN STYLE="font-weight: normal">NetGen Software Support Service
+Available:</SPAN> support@netgensoftware.com 
+</P>
+<HR SIZE=1 NOSHADE>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT COLOR="#333366"><FONT SIZE=2 STYLE="font-size: 9pt"><SPAN STYLE="font-weight: normal"><A HREF="../../../GlassFishESBv21/glassfish/docs/copyright.html">Copyright@</A>
+2011 NetGenSoftware, INC. www.netgensoftware.com</SPAN></FONT></FONT></P>
+</BODY>
+</HTML>
